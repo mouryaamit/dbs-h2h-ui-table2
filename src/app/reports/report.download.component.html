@@ -1,0 +1,15 @@
+<div class="main" role="main">
+  <div class="container">
+    <h2>Download Reports here</h2>
+    <p></p>
+    <div class="form-group">
+      <label>Select report type from below dropdown and click download:</label>
+      <select class="form-control" [(ngModel)]="reportType">
+        <option [ngValue]="EOD">EOD</option>
+        <option [ngValue]="MTD">MTD</option>
+        <option [ngValue]="YTD">YTD</option>
+      </select>
+      <button class="btn btn-warning" (click)="downloadReport()">Download</button>
+    </div>
+  </div>
+</div>

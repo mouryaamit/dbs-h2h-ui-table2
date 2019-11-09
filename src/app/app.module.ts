@@ -6,14 +6,16 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {AppComponent} from './app.component';
+import { AppComponent } from './app.component';
+import { ReportDownloadComponent } from './reports/report.download.component';
+import { ReportService } from './reports/report.service';
 
-let config = require('../assets/config.json');
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+        AppComponent, ReportDownloadComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -23,8 +25,8 @@ let config = require('../assets/config.json');
     FormsModule,
     NgbModule.forRoot()
   ],
-  providers: [
-    NgbTabset
+    providers: [
+        NgbTabset, ReportService
   ],
   bootstrap: [AppComponent],
   exports: []
